@@ -1,2 +1,1 @@
-# todo-React
-Created with CodeSandbox
+# コンポーネントする前の処理
