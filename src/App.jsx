@@ -67,7 +67,7 @@ export const App = () => {
           })}
         </ul>
       </div>
-      <div className="complere-area">
+      <div className="complete-area">
         <p className="title">完了のTODO</p>
         <ul>
           {completeTodos.map((todo, index) => {
