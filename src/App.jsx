@@ -6,8 +6,9 @@ import "./styles.css";
 // その関数の中で何番目か判定していろんなn処理をしていく
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// このコードは、入力フォームに入力された文字列をstateのtodoTextに設定するための関数です。
 export const App = () => {
-  const [todoText, setTodoText] = useState(``);
+  const [todoText, setTodoText] = useState(``); // 空の文字列 ('') が初期値として設定されています。
   const [incompleteTodos, setIncompleteTodos] = useState(["あああ", "いいい"]);
   const [completeTodos, setComleteTodos] = useState([`ううう`]);
 
@@ -22,13 +23,14 @@ export const App = () => {
 // たとえば、フォームのテキスト入力フィールドでテキストを入力すると、そのテキストフィールドがフォーカスを失ったときにイベントが発生します。その後、イベントハンドラー関数内で (event.target.value) を使用して、テキスト入力フィールドに入力されたテキストの値を取得できます。これにより、入力値を処理することができます。
 
   const onClickAdd = () => {
-    if (todoText === "") return; //追加ボタン押しても追加されない
+    if (todoText === "") return; //追加ボタン押しても追加されない、
     const newTodos = [...incompleteTodos, todoText];
     setIncompleteTodos(newTodos);
     setTodoText(""); //入力欄も文字を入れなくする
   };
-  
-// このコードは、入力フォームに入力された文字列をstateのtodoTextに設定するための関数です。
+  // この関数は「追加」ボタンがクリックされた時に実行される処理を定義しています。まず、入力欄に入力されたテキストを取得し、その値が空の場合は何もせずに処理を終了します。
+
+
 
   
   ---------------------------------------------------------------------------------------
