@@ -12,7 +12,6 @@ export const App = () => {
   const [completeTodos, setComleteTodos] = useState([`ううう`]);
 
   const onChangeTodoText = (event) => setTodoText(event.target.value);
-  // このコードは、入力フォームに入力された文字列をstateのtodoTextに設定するための関数です。
   // この関数はonChangeイベントで呼び出され、event.target.valueで取得した値が、setTodoText関数を介してtodoTextに設定されます。
   // つまり、入力された値がリアルタイムで反映されるようになります。
   
@@ -29,6 +28,8 @@ export const App = () => {
     setTodoText(""); //入力欄も文字を入れなくする
   };
   
+// このコードは、入力フォームに入力された文字列をstateのtodoTextに設定するための関数です。
+
   
   ---------------------------------------------------------------------------------------
 
