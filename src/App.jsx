@@ -5,12 +5,16 @@ import "./styles.css";
 // mapのindexを使用して関数に渡してあげて
 // その関数の中で何番目か判定していろんなn処理をしていく
 
+
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // このコードは、入力フォームに入力された文字列をstateのtodoTextに設定するための関数です。
 export const App = () => {
   const [todoText, setTodoText] = useState(``); // 空の文字列 ('') が初期値として設定されています。
   const [incompleteTodos, setIncompleteTodos] = useState(["あああ", "いいい"]);
   const [completeTodos, setComleteTodos] = useState([`ううう`]);
+  
+  
 
   const onChangeTodoText = (event) => setTodoText(event.target.value);
   // この関数はonChangeイベントで呼び出され、event.target.valueで取得した値が、setTodoText関数を介してtodoTextに設定されます。
@@ -22,10 +26,20 @@ export const App = () => {
 // (event.target.value) は、イベントが発生した要素の値を取得するために使用される式です。一般的に、ユーザーの入力値を取得するために使用されます。
 // たとえば、フォームのテキスト入力フィールドでテキストを入力すると、そのテキストフィールドがフォーカスを失ったときにイベントが発生します。その後、イベントハンドラー関数内で (event.target.value) を使用して、テキスト入力フィールドに入力されたテキストの値を取得できます。これにより、入力値を処理することができます。
 
+  
+  
   const onClickAdd = () => {
     if (todoText === "") return; //追加ボタン押しても追加されない、
     const newTodos = [...incompleteTodos, todoText];
+// この行の役割は、現在の incompleteTodos 配列に、新しい todoText 文字列を追加して、新しい配列を作成することです。
+// スプレッド演算子（...）は、incompleteTodos 配列のすべての要素を展開し、その後に todoText を追加しています。
+// これにより、新しい配列が作成され、その後 setIncompleteTodos を使用して、新しい配列が incompleteTodos ステート変数に設定されます。
+    
+    
     setIncompleteTodos(newTodos);
+// この行は、「incompleteTodos」配列に「newTodos」配列を追加するためのものです。
+    
+    
     setTodoText(""); //入力欄も文字を入れなくする
   };
   // この関数は「追加」ボタンがクリックされた時に実行される処理を定義しています。まず、入力欄に入力されたテキストを取得し、その値が空の場合は何もせずに処理を終了します。
