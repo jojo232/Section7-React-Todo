@@ -56,6 +56,7 @@ export const App = () => {
   // incompleteTodosの配列をコピーし、spliceメソッドを使用して指定されたインデックスの要素を削除します。
   // setIncompleteTodosを使用して削除後の新しい配列をincompleteTodosの状態として設定します
   // onClickDelete関数が呼ばれたときに指定されたインデックスの要素が削除され、未完了のTODOリストが更新されます。
+  // .splice = 配列newIncompleteTodosから指定されたインデックスの要素を削除するためのメソッドです。
   
   
 
@@ -69,8 +70,7 @@ export const App = () => {
   };
  // onClickComplete関数は、与えられたインデックスの要素を未完了のTODOリストから完了のTODOリストに移動させる処理を行います。
 　// 　onClickComplete関数が実行されたときに、指定されたインデックスの要素が未完了のTODOリストから削除され、完了のTODOリストに追加されます。
-// そして、setIncompleteTodosとsetCompleteTodosを使用して、それぞれの状態を更新します。
-  
+// そして、setIncompleteTodosとsetCompleteTodosを使用して、それぞれの状態を更新します。  
   
 
   const onClickBack = (index) => {
