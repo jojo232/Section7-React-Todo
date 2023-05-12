@@ -44,10 +44,7 @@ export const App = () => {
   };
   // この関数は「追加」ボタンがクリックされた時に実行される処理を定義しています。まず、入力欄に入力されたテキストを取得し、その値が空の場合は何もせずに処理を終了します。
 
-
-
-  
-  ---------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
   const onClickDelete = (index) => {
@@ -55,6 +52,12 @@ export const App = () => {
     newTodos.splice(index, 1);
     setIncompleteTodos(newTodos);
   };
+  // onClickDelete関数は、与えられたインデックスの要素を未完了のTODOリストから削除するための処理を行います。
+  // incompleteTodosの配列をコピーし、spliceメソッドを使用して指定されたインデックスの要素を削除します。
+  // setIncompleteTodosを使用して削除後の新しい配列をincompleteTodosの状態として設定します
+  // onClickDelete関数が呼ばれたときに指定されたインデックスの要素が削除され、未完了のTODOリストが更新されます。
+  
+  
 
   const onClickComplete = (index) => {
     const newIncompleteTodos = [...incompleteTodos];
@@ -64,6 +67,11 @@ export const App = () => {
     setIncompleteTodos(newIncompleteTodos);
     setComleteTodos(newCompleteTodos);
   };
+ // onClickComplete関数は、与えられたインデックスの要素を未完了のTODOリストから完了のTODOリストに移動させる処理を行います。
+　// 　onClickComplete関数が実行されたときに、指定されたインデックスの要素が未完了のTODOリストから削除され、完了のTODOリストに追加されます。
+// そして、setIncompleteTodosとsetCompleteTodosを使用して、それぞれの状態を更新します。
+  
+  
 
   const onClickBack = (index) => {
     const newCompleteTodos = [...completeTodos];
